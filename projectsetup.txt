@@ -1,0 +1,15 @@
+# Create subfolders
+New-Item -ItemType Directory -Force -Path data, src, logs
+
+# Create files in /data
+New-Item data\jobs.csv -ItemType File
+New-Item data\input_urls.csv -ItemType File
+
+# Create files in /src
+New-Item src\__init__.py, src\main.py, src\config.py, src\scraper.py, src\parser.py, src\storage.py, src\deduplicator.py, src\scheduler.py, src\utils.py -ItemType File
+
+# Create logs file
+New-Item logs\scraper.log -ItemType File
+
+# Create root-level files
+New-Item requirements.txt, README.md, Dockerfile, run.sh -ItemType File
